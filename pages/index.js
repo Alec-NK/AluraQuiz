@@ -1,7 +1,11 @@
+import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo'
+import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
@@ -18,27 +22,56 @@ const BackgroundImage = styled.div`
 
 export const QuizContainer = styled.div`
   width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
+  max-width: 370px;
+  padding: 25px 20px;
+  margin: 4% 10%;
+  background-color: rgb(0,0,0,0.8);
+  border-radius: ${({ theme }) => theme.borderRadius};
   @media screen and (max-width: 500px) {
     margin: auto;
     padding: 15px;
   }
 `;
 
-
 export default function Home() {
-  return ( 
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
+  return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Quiz</title>
+      </Head>
       <QuizContainer>
-        <QuizLogo/>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>Avatar: A Lenda de Aang</h1>
           </Widget.Header>
           <Widget.Content>
             <p>Você sabe mesmo tudo sobre Avatar: A Lenda de Aang?</p>
+            <form onSubmit={function(infosDoEvento){
+              infosDoEvento.preventDefault(); // Faz com que toda a página não atualize 
+              
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma sunmissão por meio do react');
+
+              // Router manda para outra página
+              }}> 
+
+              <input 
+                onChange={function(infosDoEvento){
+                  console.log(infosDoEvento.target.value);
+                  // State
+                  //name = infosDoEvento.target.value;
+                  setName(infosDoEvento.target.value);
+                }} 
+                placeholder="Digite o seu nome para jogar"
+              />
+
+              <button type="submit" disabled={name.length === 0}>Jogar</button>
+            </form>
+            
           </Widget.Content>
         </Widget>
 
@@ -47,9 +80,9 @@ export default function Home() {
             <h1>Quizes da Galera</h1>
           </Widget.Content>
         </Widget>
-        <Footer/>
+        <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/Alec-NK"/>
-    </QuizBackground> 
+      <GitHubCorner projectUrl="https://github.com/Alec-NK" />
+    </QuizBackground>
   );
 }
