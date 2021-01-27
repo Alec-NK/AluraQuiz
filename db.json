@@ -4,25 +4,51 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://mundodeadan.files.wordpress.com/2013/11/avatar_state_by_dctb-d6s13wj.jpg?w=1174",
+        "title": "Qual o nome do primeiro Avatar?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Huan",
+          "Wan",
+          "Uan",
+          "Ruan"
         ]
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "title": "Qual o nome do bisão voador de Aang?",
+        "description": "Ez demais",
+        "answer": 3,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Hapa",
+          "Apaa",
+          "Happa",
+          "Apa"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual é a ordem que o Aang dominou os elementos?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Ar - Agua - Fogo - Terra",
+          "Ar - Terra - Agua - Fogo",
+          "Ar - Agua - Terra - Fogo",
+          "Ar - Fogo - Agua - Terra"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual a raça de Momo?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Ratasana Voadora",
+          "Morcego do Ar",
+          "Lemore Morcego",
+          "Rato Voador"
         ]
       }
     ],
@@ -36,7 +62,8 @@
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
         "wrong": "#FFF722",
-        "success": "#4CAF50"
+        "success": "#4CAF50",
+        "disable": "#9a9698"
       },
       "borderRadius": "4px"
     }

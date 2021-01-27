@@ -18,32 +18,7 @@ const Widget = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
-  }
-  input{
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px; 
-    outline: none;
-    background: transparent;
-    border: solid 1px ${({ theme }) => theme.colors.primary};
-    border-radius: 3px;
-    color: ${({ theme }) => theme.colors.contrastText};
-  }
-  button{
-    display: block;
-    width: 100%;
-    padding: 8px;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.contrastText};
-    font-weight: bold;
-  }
-  button:hover{
-    cursor: pointer;
-  }
+  }         
 `;
 
 Widget.Header = styled.header`
@@ -72,4 +47,54 @@ Widget.Content = styled.div`
   }
 `;
 
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+`;
+
 export default Widget;
+
+/* 
+input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px; 
+    outline: none;
+    background: transparent;
+    border: solid 1px ${({ theme }) => theme.colors.primary};
+    border-radius: 3px;
+    color: ${({ theme }) => theme.colors.contrastText};
+  }
+  button{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.contrastText};
+    font-weight: bold;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+  button:disabled,
+  button[disabled]{
+    opacity: 0.5;
+  }  
+*/

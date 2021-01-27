@@ -1,14 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
+import QuizContainer from '../src/components/QuizContainer';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 /*
 const BackgroundImage = styled.div`
@@ -20,18 +22,6 @@ const BackgroundImage = styled.div`
 `;
 */
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 370px;
-  padding: 25px 20px;
-  margin: 4% 10%;
-  background-color: rgb(0,0,0,0.8);
-  border-radius: ${({ theme }) => theme.borderRadius};
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
 
 export default function Home() {
   const router = useRouter();
@@ -59,17 +49,14 @@ export default function Home() {
               // Router manda para outra página
               }}> 
 
-              <input 
-                onChange={function(infosDoEvento){
-                  console.log(infosDoEvento.target.value);
-                  // State
-                  //name = infosDoEvento.target.value;
-                  setName(infosDoEvento.target.value);
-                }} 
+              <Input 
+                name = "nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)} 
                 placeholder="Digite o seu nome para jogar"
+                value={name}
               />
 
-              <button type="submit" disabled={name.length === 0}>JOGAR</button>
+              <Button type="submit" disabled={name.length === 0}>JOGAR</Button>
             </form>
             
           </Widget.Content>
