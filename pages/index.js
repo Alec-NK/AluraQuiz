@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Quiz</title>
+        <title>Avatar Quiz</title>
       </Head>
       <QuizContainer>
         <QuizLogo />
@@ -69,7 +69,7 @@ export default function Home() {
                 placeholder="Digite o seu nome para jogar"
               />
 
-              <button type="submit" disabled={name.length === 0}>Jogar</button>
+              <button type="submit" disabled={name.length === 0}>JOGAR</button>
             </form>
             
           </Widget.Content>
