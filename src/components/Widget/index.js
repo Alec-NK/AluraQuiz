@@ -66,35 +66,3 @@ Widget.Topic = styled.a`
 `;
 
 export default Widget;
-
-/* 
-input{
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px; 
-    outline: none;
-    background: transparent;
-    border: solid 1px ${({ theme }) => theme.colors.primary};
-    border-radius: 3px;
-    color: ${({ theme }) => theme.colors.contrastText};
-  }
-  button{
-    display: block;
-    width: 100%;
-    padding: 8px;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.contrastText};
-    font-weight: bold;
-  }
-  button:hover{
-    cursor: pointer;
-  }
-  button:disabled,
-  button[disabled]{
-    opacity: 0.5;
-  }  
-*/

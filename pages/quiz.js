@@ -17,7 +17,7 @@ function LoadingWidget(){
             </Widget.Header>
 
             <Widget.Content>
-                [Desafio do Loading]
+                Carregando Perguntas...
             </Widget.Content>
         </Widget>
     );
@@ -49,20 +49,21 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit}){
                     {question.description}
                 </p>
 
-                {/*//{JSON.stringify(questions, null, 4)} - Debug na tela */}
+                {/* {JSON.stringify(questions, null, 4)} - Debug na tela */}
                 <form onSubmit={(infoDoEvento) => {
                     infoDoEvento.preventDefault(); // Evita que a página inteira seja atualizada
                     onSubmit();
                 }}>
                     {question.alternatives.map((alternative, alternativeIndex) =>{
                         const  alternativeID = `alternative__${alternativeIndex}`;
-                        console.log("ID: " + alternativeID + " alternativa: " + alternative);
+                        console.log("ID: " + alternativeIndex + " alternativa: " + alternative);
                         return (
                             <Widget.Topic
                                 as="label" // Muda para a tag q irá ser renderizada na tela
                                 htmlFor={alternativeID}
                             >
-                                <input id={alternativeID} name={questionID} type="radio"/>
+                                <input id={alternativeID} name={questionID} checked='' type="radio"/>
+                                
                                 {alternative}
                             </Widget.Topic>
                         );

@@ -44,7 +44,7 @@ export default function Home() {
               infosDoEvento.preventDefault(); // Faz com que toda a página não atualize 
               
               router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma sunmissão por meio do react');
+              console.log('Fazendo uma submissão por meio do react');
 
               // Router manda para outra página
               }}> 

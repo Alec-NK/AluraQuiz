@@ -16,19 +16,19 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "image": "https://media.giphy.com/media/UTXH5YjqIOzihAP4Ee/giphy.gif",
         "title": "Qual o nome do bisão voador de Aang?",
-        "description": "Ez demais",
+        "description": "Essa é Ez demais",
         "answer": 3,
         "alternatives": [
           "Hapa",
           "Apaa",
           "Happa",
-          "Apa"
+          "Appa"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2018/10/63978164-avatar-the-last-airbender-wallpapers.jpg",
         "title": "Qual é a ordem que o Aang dominou os elementos?",
         "description": "",
         "answer": 2,
@@ -40,8 +40,8 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Qual a raça de Momo?",
+        "image": "https://media.giphy.com/media/hfT4eNf5EXeuY/giphy.gif",
+        "title": "Qual a raça do Momo?",
         "description": "",
         "answer": 2,
         "alternatives": [
@@ -49,6 +49,18 @@
           "Morcego do Ar",
           "Lemore Morcego",
           "Rato Voador"
+        ]
+      },
+      {
+        "image": "https://p4.wallpaperbetter.com/wallpaper/357/103/706/avatar-anime-avatar-the-last-airbender-fish-la-avatar-wallpaper-preview.jpg",
+        "title": "Qual nome do espírito da lua?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "La",
+          "Yang",
+          "Ying",
+          "Tui"
         ]
       }
     ],
