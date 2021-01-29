@@ -45,9 +45,9 @@
         "description": "",
         "answer": 2,
         "alternatives": [
-          "Ratasana Voadora",
+          "Lêmure do Ar",
           "Morcego do Ar",
-          "Lemore Morcego",
+          "Lêmure Voador",
           "Rato Voador"
         ]
       },
@@ -61,6 +61,18 @@
           "Yang",
           "Ying",
           "Tui"
+        ]
+      },
+      {
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/08/Aang-Avatar-State-Roku.jpg",
+        "title": "Qual era o companheiro animal de Roku?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Abutre Leão",
+          "Dragão",
+          "Falcão Mensageiro",
+          "Urso"
         ]
       }
     ],

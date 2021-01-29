@@ -14,10 +14,10 @@ import GitHubCorner from '../src/components/GitHubCorner';
 function upperLetter(nome){
     let firstName = nome.split(" ")[0];
     let letter = firstName.charAt(0);
-    let afterLetter = letter.toUpperCase();
+    let fLetter = letter.toUpperCase();
     let restName = firstName.substr(1, firstName.length);
 
-    return afterLetter + restName;
+    return fLetter + restName;
 }
 
 function LoadingWidget(){
@@ -44,7 +44,7 @@ function LoadingWidget(){
 
 function ResultWidget({results}){
     const router = useRouter();
-    
+    console.log(results);
     const name = router.query.name;
     const firstName = upperLetter(name);
 
@@ -70,7 +70,7 @@ function ResultWidget({results}){
                     {/*{results.reduce((somatoriaAtual, resultAtual) => {
                         const isAcerto = resultAtual === true;
                         if (isAcerto) {
-                        return somatoriaAtual + 1;
+                            somatoriaAtual + 1;
                         }
                         return somatoriaAtual;
                     }, 0)}*/}
@@ -81,16 +81,14 @@ function ResultWidget({results}){
                 <ul>
                 {results.map((result, index) => (
                     <li key={`result__${result}`}>
-                    
-                    {' Pergunta '}
-                    {index + 1}
-                    {': '}
-                    {result === true
-                        ? 'Acertou'
-                        : 'Errou'}
+                        {' Pergunta '}
+                        {index + 1}
+                        {': '}
+                        {result === true ? <span class="success">Acertou</span> : <span class="wrong">Errou</span>}
                     </li>
                 ))}
                 </ul>
+
             </Widget.Content>
         </Widget>
     );
@@ -143,7 +141,7 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
                         const alternativeID = `alternative__${alternativeIndex}`;
                         const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
                         const isSelected = selectedAlternative === alternativeIndex;
-                        console.log("ID: " + alternativeIndex + " alternativa: " + alternative);
+
                         return (
                             <Widget.Topic
                                 as="label" // Muda para a tag q irá ser renderizada na tela
@@ -152,7 +150,7 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
                                 data-selected={isSelected}
                                 data-status={isQuestionSubmited && alternativeStatus}
                             >
-                                <input style={{display: 'none'}} id={alternativeID} name={questionID} onChange={() => setSelectedAlternative(alternativeIndex)} type="radio"/>
+                                <input style={{display: 'none'}} id={alternativeID} checked={isSelected} name={questionID} onChange={() => setSelectedAlternative(alternativeIndex)} type="radio"/>
                                 
                                 {alternative}
                             </Widget.Topic>
@@ -163,8 +161,6 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
                         Confirmar
                     </Button>
 
-                    {isQuestionSubmited && isCorrect && <p>Voce acertou!</p>}
-                    {isQuestionSubmited && !isCorrect && <p>Voce errou!</p>}
                 </AlternativeForm>
             </Widget.Content>
         </Widget>

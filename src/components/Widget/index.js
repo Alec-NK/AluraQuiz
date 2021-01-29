@@ -45,6 +45,12 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+  span.success{
+    color: ${({ theme }) => theme.colors.success};
+  }
+  span.wrong{
+    color: ${({ theme }) => theme.colors.wrong};
+  }
 `;
 
 Widget.Topic = styled.a`
