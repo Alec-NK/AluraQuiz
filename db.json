@@ -77,7 +77,9 @@
       }
     ],
     "external": [
-      ""
+      "https://quiz-imersao-react.olucasalves.vercel.app/",
+      "https://quiz-valorant.johnatanivini.vercel.app/",
+      "https://harry-potter-quiz.lucianoweslen11.vercel.app/"
     ],
     "theme": {
       "colors": {

@@ -2,14 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizBackground from '../src/components/QuizBackground';
-import AlternativeForm from '../src/components/AlternativeForm';
-import Button from '../src/components/Button';
-import GitHubCorner from '../src/components/GitHubCorner';
+import db from '../../db.json';
+import Widget from '../../src/components/Widget';
+import QuizLogo from '../../src/components/QuizLogo';
+import QuizContainer from '../../src/components/QuizContainer';
+import QuizBackground from '../../src/components/QuizBackground';
+import AlternativeForm from '../../src/components/AlternativeForm';
+import Button from '../../src/components/Button';
+import GitHubCorner from '../../src/components/GitHubCorner';
+import BackLinkArrow from '../../src/components/BackLinkArrow/index.js';
+
 
 function upperLetter(nome){
     let firstName = nome.split(" ")[0];
@@ -28,15 +30,7 @@ function LoadingWidget(){
             </Widget.Header>
 
             <Widget.Content>
-            <img
-                alt="Descrição"
-                style={{
-                    width: '100%',
-                    height: '150px',
-                    objectFit: 'cover',
-                }}
-                src='https://i.pinimg.com/originals/65/ba/48/65ba488626025cff82f091336fbf94bb.gif'
-            />
+                Carregando...
             </Widget.Content>
         </Widget>
     );
@@ -104,6 +98,7 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
     return(
         <Widget>
             <Widget.Header>
+                <BackLinkArrow href='/' />
                 <h3>
                     {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
                 </h3>
