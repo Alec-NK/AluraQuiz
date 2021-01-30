@@ -112,9 +112,9 @@ export default function Home() {
 
                 return(
                   <li key={linkExterno}>  
-                    <Widget.Topic as={Link} href={linkSite}>
+                    <Widget.Alternative as={Link} href={linkSite}>
                       {`${githubUser}/${projectName}`}
-                    </Widget.Topic>
+                    </Widget.Alternative>
                   </li>
                 );
               })}

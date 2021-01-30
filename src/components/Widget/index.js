@@ -71,4 +71,18 @@ Widget.Topic = styled.a`
   }
 `;
 
+Widget.Alternative = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}90`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: .3s;
+  display: block;
+
+`;
+
 export default Widget;
